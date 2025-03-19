@@ -1,20 +1,55 @@
-# Running Tests On Your Laptop
+# 📌 Playwright TypeScript Test Framework
 
-## Prerequisites
-If you are setting up a brand new laptop, you will need to configure the following items, which are required for most projects at Hootsuite.
+This repository contains an automated testing framework using **Playwright** with **TypeScript**. It follows the **Page Object Model (POM)** for better maintainability and scalability.
 
-- A version of bash >= v4
-- [Setup your github SSH keys](https://docs.github.com/en/enterprise-server@3.3/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- [Homebrew package manager](https://brew.sh/)
-- [Install hs-opskit](https://hootsuite.atlassian.net/wiki/spaces/POD/pages/898785/OpsKit+Help+Page)
-- [Setup credentials for Artifactory](https://hootsuite.atlassian.net/wiki/spaces/POD/pages/899658/Artifactory+Home)
-- yarn & node 16 or higher (or use nvm)
+---
 
-## Installation
-If you have already completed the preceding setup (for example, for another Hootsuite project), you will only need to
+## 🚀 Setup & Installation
 
-```
-git clone https://github.com/lavanyapetchetti/iConnect.git
+### 1. Prerequisites
+Ensure you have the following installed:
+- **Node.js** (≥ 16.x)
+- **npm** or **yarn**
+- **Playwright**
+
+### 2. Clone the Repository
+```sh
+git clone https://github.com/your-repo/iConnect.git
 cd iConnect
-make install
 ```
+
+### 3. Install Dependencies
+```sh
+npm install
+```
+
+### 4. Install Playwright Browsers
+```sh
+npx playwright install
+```
+
+---
+
+## 📝 Running Tests
+
+### Run All Tests
+```sh
+npx playwright test
+```
+
+### Run a Specific Test
+```sh
+npx playwright test tests/login.spec.ts
+```
+
+### Run Tests in Headed Mode
+```sh
+npx playwright test --headed
+```
+
+### Generate HTML Report
+```sh
+npx playwright show-report
+```
+
+---
